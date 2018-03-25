@@ -1,0 +1,32 @@
+/* Default value is no wrap, which is why it's only displaying on one row. Create another gutter div for another row*/
+
+.grid {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;	
+}
+
+.gutters {
+	margin: -10px 0 10px -10px;	
+}
+
+.gutters > .cell {
+	padding: 10px 0 0 10px;
+}
+
+.cell {
+	flex: 1; /* 1 1 0%  - Flex grow value of 1. Content will take same width all the time */  
+}
+
+.cell > div {
+	background-color: rgba(255, 255, 255, 0.7);
+	height: 100%;
+	padding: 10px;
+}
+
+.large {
+	flex-grow: 2;
+	/* Allows you to select an HTML element (e.g div element with class of cell) to increase in width */  	
+}
